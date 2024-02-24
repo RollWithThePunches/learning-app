@@ -1,5 +1,48 @@
 @import '_config';
+@import './partials/card.scss';
 
 body {
     background-color: $white;
+}
+
+main {
+    margin: $m0 auto;
+    max-width: 1200px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $dk-gray;
+    font-weight: $bd;
+}
+
+h1 {
+    font-size: $xxl;
+}
+
+h3 {
+    font-size: $lg;
+}
+
+p,
+a {
+    font-size: $md;
+    font-weight: $rg;
+}
+
+a {
+    color: $blue;
+
+    &:hover,
+    &:active {
+        color: orange;
+    }
+
+    &:visited {
+        color: purple;
+    }
 }

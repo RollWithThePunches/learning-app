@@ -1,0 +1,28 @@
+{
+    "dashboard": {
+        "hero": [
+            {
+                "eyebrow": "Legal product training",
+                "headline": "Advising small and midsized businesses",
+                "intro": "Provides deeper dive training resources for advising small and midsized businesses.",
+                "sideCard": [
+                    {
+                        "headline": "Put your training to the test",
+                        "cta": "Sign in to your products",
+                        "link": "https://www.thomsonreuters.com/en/login.html"
+                    }
+                ]
+            }
+        ],
+        "cards": [
+            {
+                "headline": "Card 1",
+                "paragraph": "This is for card 1",
+                "link": "https://www.cnn.com",
+                "cta": "Visit CNN",
+                "src": "https://assets.codepen.io/1329727/feature.jpg",
+                "alt": "It's a building"
+            }
+        ]
+    }
+}
