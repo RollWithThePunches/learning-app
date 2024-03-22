@@ -1,5 +1,10 @@
 @import '_config';
-@import './partials/card.scss';
+@import './partials/border.scss';
+@import './partials/flex-grid.scss';
+@import './partials/margins';
+@import './partials/padding.scss';
+@import './partials/typography.scss';
+
 
 body {
     background-color: $white;
@@ -7,7 +12,12 @@ body {
 
 main {
     margin: $m0 auto;
+    padding: $p0 $p3;
     max-width: 1200px;
+}
+
+section {
+    margin: $m8 auto;
 }
 
 h1,
@@ -17,32 +27,33 @@ h4,
 h5,
 h6 {
     color: $dk-gray;
-    font-weight: $bd;
+    font-weight: $fw3;
 }
 
 h1 {
-    font-size: $xxl;
+    font-size: $fxxxl;
+    margin-bottom: $m2;
 }
 
 h3 {
-    font-size: $lg;
+    font-size: $flg;
 }
 
 p,
 a {
-    font-size: $md;
-    font-weight: $rg;
+    font-size: $fmd;
+    font-weight: $fw2;
 }
 
 a {
     color: $blue;
 
+    &:visited {
+        color: purple;
+    }
+
     &:hover,
     &:active {
         color: orange;
-    }
-
-    &:visited {
-        color: purple;
     }
 }

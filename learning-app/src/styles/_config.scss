@@ -33,15 +33,34 @@ $blue: blue;
 
 // Fonts
 // Font size
-$sm: .875rem;
-$md: 1rem;
-$lg: 1.25rem;
-$xl: 1.5rem;
-$xxl: 2rem;
-$xxxl: 3rem;
+$fsm: .875rem;
+$fmd: 1rem;
+$flg: 1.25rem;
+$fxl: 1.5rem;
+$fxxl: 2rem;
+$fxxxl: 3rem;
 
 // Font weight
-$lt: 300;
-$rg: 500;
-$bd: 700;
-$hv: 900;
+$fw1: 300;
+$fw2: 500;
+$fw3: 700;
+$fw4: 900;
+
+// Line height
+$l1: 1;
+$l2: 1.25;
+$l3: 1.5;
+$l4: 1.75;
+$l5: 2;
+
+// Breakpoints
+$sm: 576px;
+$sm-max: $sm - 1;
+$md: 768px;
+$md-max: $md - 1;
+$lg: 992px;
+$lg-max: $lg - 1;
+$xl: 1200px;
+$xl-max: $xl - 1;
+$xxl: 1400px;
+$xxl-max: $xxl - 1;

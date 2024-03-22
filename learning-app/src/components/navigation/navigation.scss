@@ -1,0 +1,80 @@
+@import '../../styles/config';
+
+.nav-header {
+    border-bottom: 1px solid $gray;
+    height: 60px;
+    width: 100%;
+
+    .nav-container {
+        position: relative;
+
+        @media (max-width: $md) {
+            align-items: center;
+            display: flex;
+        }
+
+        .nav-li-wrap {
+            margin: auto;
+            max-width: 1200px;
+            padding: $p0 $p3;
+            width: 100%;
+
+            @media (max-width: $md) {
+                background-color: $white;
+                height: calc(100vh - 61px);
+                left: 0;
+                padding: $p3;
+                position: absolute;
+                top: 61px;
+                transform: translateX(100vw);
+                width: 100%;
+
+                &.active {
+                    transform: translateX(0);
+                    transition: all .2s ease-in;
+                }
+            }
+
+            .nav-ul {
+                display: flex;
+                flex-direction: row;
+                gap: $m3;
+                height: 60px;
+
+                @media (max-width: $md) {
+                    flex-direction: column;
+                }
+    
+                .nav-li {
+                    display: flex;
+                    height: 100%;
+    
+                    a {
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+
+        .nav-hamburger {
+            display: none;
+
+            @media (max-width: $md) {
+                display: flex;
+                flex-direction: column;
+                gap: $m2;
+                height: calc(60px - $p2 * 2);
+                padding: $p2;
+                width: calc(60px - $p2 * 2);
+            }
+            
+            .nav-hamburger-bar {
+                background-color: $black;
+                height: 2px;
+                width: 100%;
+            }
+        }
+        
+    }
+}

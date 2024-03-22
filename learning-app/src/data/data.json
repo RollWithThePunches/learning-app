@@ -8,8 +8,8 @@
                 "sideCard": [
                     {
                         "headline": "Put your training to the test",
-                        "cta": "Sign in to your products",
-                        "link": "https://www.thomsonreuters.com/en/login.html"
+                        "cta": "Sign in",
+                        "link": "https://accounts.firefox.com/oauth/?response_type=code&client_id=720bc80adfa6988d&state=ggWW_0SMxiFBqibX6o2IEw&redirect_uri=https%3A%2F%2Fdeveloper.mozilla.org%2Fusers%2Ffxa%2Flogin%2Fcallback%2F&scope=openid%2Bopenid%2Bprofile%2Bemail%2Bprofile%3Asubscriptions&access_type=offline&nonce=_YiYRlvswxsk2EwTCBuK6g"
                     }
                 ]
             }
@@ -18,10 +18,32 @@
             {
                 "headline": "Card 1",
                 "paragraph": "This is for card 1",
-                "link": "https://www.cnn.com",
-                "cta": "Visit CNN",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+                "cta": "Learn about JavaScript",
                 "src": "https://assets.codepen.io/1329727/feature.jpg",
                 "alt": "It's a building"
+            },
+            {
+                "headline": "Card 2",
+                "paragraph": "This is for card 2",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+                "cta": "Learn about CSS",
+                "src": "https://assets.codepen.io/1329727/feature.jpg",
+                "alt": "It's a building"
+            }
+        ],
+        "grid-items": [
+            {
+                "headline": "Lorem Ipsum 1",
+                "paragraph": "Ut enim ad minim veniam, quis nostrud."
+            },
+            {
+                "headline": "Lorem Ipsum 2",
+                "paragraph": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+            },
+            {
+                "headline": "Lorem Ipsum 3",
+                "paragraph": "Voluptate velit esse cillum dolore eu fugiat quis nostrud."
             }
         ]
     }
