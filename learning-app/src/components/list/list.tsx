@@ -2,6 +2,7 @@ import './list.scss';
 
 interface ListProps {
     children: any;
+    size: Size;
     style: ListStyle;
     type: ListType;
 }
@@ -19,11 +20,17 @@ export enum ListStyle {
     SQUARE = 'square'
 }
 
-export function List({children, style, type}: ListProps) {
+export enum Size {
+    SMALL = 'sm',
+    MEDIUM = 'md',
+    LARGE = 'lg'
+}
+
+export function List({children, size, style, type}: ListProps) {
     return (
         <>
-        {type === 'ol' ? <ol className={`list grid g3 ${style}`}>{children}</ol> : null}
-        {type === 'ul' ? <ul className={`list grid g3 ${style}`}>{children}</ul> : null}
+        {type === 'ol' ? <ol className={`list grid g3 ${style} ${size}`}>{children}</ol> : null}
+        {type === 'ul' ? <ul className={`list grid g3 ${style} ${size}`}>{children}</ul> : null}
         </>
     )
 }

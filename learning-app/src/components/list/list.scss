@@ -1,1 +1,61 @@
 @import '../../styles/config';
+
+ol,
+ul {
+    .sm {
+        font-size: $fsm;
+    }
+
+    .md {
+        font-size: $fmd;
+    }
+
+    .lg {
+        font-size: $flg;
+    }
+}
+
+ol {
+    padding-left: $p0;
+
+    .lower-alpha {
+        &::before {
+            content: '';
+        }
+    }
+
+    .lower-roman {
+        &::before {
+            content: '';
+        }
+    }
+
+    .none {
+        &::before {
+            display: none;
+        }
+    }
+}
+
+
+ul {
+    padding-left: $p0;
+
+    .circle {
+        &::before {
+            content: '';
+        }
+    }
+
+    .none {
+        &::before {
+            display: none;
+        }
+    }
+
+    .square {
+        &::before {
+            content: '';
+        }
+    }
+}
