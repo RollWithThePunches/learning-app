@@ -10,11 +10,16 @@ import { Button, Order } from '@/components/button/button';
 import { ContactForm } from '@/components/form/form';
 import JSONData from '../../data/data.json';
 import GridItem from '@/components/grid-item/grid-item';
+import { List, ListStyle, ListType, Size } from '@/components/list/list';
+import { ListItem } from '@/components/list/list-item/list-item';
+import { Expand } from '@/components/expand/expand';
 
 export default function Page() {
     const data = JSONData;
     const cards = data.dashboard.cards;
     const gridItems = data.dashboard['grid-items'];
+    const list = data.dashboard.list;
+    const faq = data.dashboard.faq;
     let start = 0;
     start++;
 
@@ -70,6 +75,39 @@ export default function Page() {
                     )
                 })}
             </Columns>
+            <Columns number={Number.ONE}>
+                <List
+                    type={ListType.UNORDERED}
+                    size={Size.MEDIUM}
+                > 
+                    {Object.values(list).map(item => {
+                        return (
+                            <>
+                            <ListItem>{item['list-item']}</ListItem>
+                            </>
+                        )
+                    })}
+                </List>
+            </Columns>
+            <div>
+                <List 
+                    style={ListStyle.NONE}
+                    type={ListType.UNORDERED}
+                    size={Size.MEDIUM}
+                >
+                    {Object.values(faq).map(item => {
+                        return (
+                            <>
+                            <ListItem>
+                                <Expand headline={item.question}>
+                                    {item.answer}
+                                </Expand>
+                            </ListItem>
+                            </>
+                        )
+                    })}
+                </List>    
+            </div>
             <ContactForm headline='Contact us' />
         </main>
         </>

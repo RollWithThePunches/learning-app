@@ -3,7 +3,7 @@ import './list.scss';
 interface ListProps {
     children: any;
     size: Size;
-    style: ListStyle;
+    style?: ListStyle;
     type: ListType;
 }
 

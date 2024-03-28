@@ -6,7 +6,7 @@ interface ButtonProps{
     kind?: 'primary' | 'secondary' | 'tertiary',
     order?: Order, 
     text?: string,
-    click: any
+    click?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export enum Order {

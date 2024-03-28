@@ -2,60 +2,52 @@
 
 ol,
 ul {
+    padding-left: $p4;
+
     .sm {
-        font-size: $fsm;
+        font-size: $f1;
     }
 
     .md {
-        font-size: $fmd;
+        font-size: $f2;
     }
 
     .lg {
-        font-size: $flg;
+        font-size: $f3;
     }
 }
 
 ol {
-    padding-left: $p0;
+    list-style: decimal;
 
-    .lower-alpha {
-        &::before {
-            content: '';
-        }
+    &.lower-alpha {
+        list-style: lower-alpha;
     }
 
-    .lower-roman {
-        &::before {
-            content: '';
-        }
+    &.lower-roman {
+        list-style: lower-roman;
     }
 
-    .none {
-        &::before {
-            display: none;
-        }
+    &.none {
+        list-style: none;
+        padding-left: $p0;
     }
 }
 
 
 ul {
-    padding-left: $p0;
+    list-style: initial;
 
-    .circle {
-        &::before {
-            content: '';
-        }
+    &.circle {
+        list-style: disc;
     }
 
-    .none {
-        &::before {
-            display: none;
-        }
+    &.none {
+        list-style: none;
+        padding-left: $p0;
     }
 
-    .square {
-        &::before {
-            content: '';
-        }
+    &.square {
+        list-style: square;
     }
 }
