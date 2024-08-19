@@ -1,28 +1,28 @@
 @import '../../styles/config';
 
 .app-bttn {
-    background-color: $black;
-    border: 1px solid $md-gray;
-    border-radius: 8px;
+    background-color: $purple;
+    border: none;
+    border-radius: 5px;
     color: $white;
+    cursor: pointer;
+    font-size: $f2;
     padding: $p2 $p3;
 
     &:hover,
     &.primary:hover,
     &.secondary:hover {
-        background-color: $blue;
-        border-color: $gray;
+        background-color: $pink;
         color: $white;
     }
 
     &.primary {
-        background-color: $black;
-        border-color: $md-gray;
+        background-color: $purple;
         color: $white;
     }
 
     &.secondary {
-        background-color: $lt-gray;
+        background-color: $teal;
         border-color: $gray;
         color: $black;
     }

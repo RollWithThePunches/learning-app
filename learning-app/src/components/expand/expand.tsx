@@ -1,4 +1,6 @@
 
+'use client';
+
 import './expand.scss';
 
 interface ExpandProps {
@@ -8,8 +10,8 @@ interface ExpandProps {
 
 export function Expand({headline, children}: ExpandProps) {
     return (
-        <details>
-            <summary>{headline}</summary>
+        <details className='details'>
+            <summary className='details-sum'>{headline}</summary>
             <p>{children}</p>
         </details>
     );

@@ -1,0 +1,12 @@
+@import '../../styles/config';
+
+.footer {
+    background-color: $dk-gray;
+    border-top: 10px solid $yellow;
+    min-height: 100px;
+    padding: $p3;
+
+    section {
+        margin: $m0;
+    }
+}

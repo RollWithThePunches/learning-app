@@ -1,6 +1,21 @@
 @import '../../styles/config';
 
-summary {
-    font-size: $f3;
-    font-weight: $fw3;
+.details {
+
+    .details-sum {
+        font-size: $f3;
+        font-weight: $fw3;
+        line-height: $l3;
+        text-indent: 5px;
+
+        &::marker {
+            color: $pink;
+            font-size: $f2;
+        }
+    }
+    
+    p {
+        padding-left: $p6;
+        padding-top: $p2;
+    }
 }

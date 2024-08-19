@@ -1,12 +1,15 @@
+import './anchor.scss';
+
 interface AnchorProps {
     cta?: string,
+    color?: string
     icon?: string,
-    url: string
+    url: string,
 }
 
-export function Anchor({cta, icon, url}: AnchorProps) {
+export function Anchor({cta, color, icon, url}: AnchorProps) {
     return(
-        <a href={url}>
+        <a href={url} className={color}>
             {cta}
             {icon ? <i className={`fa fa-${icon}`}></i> : null}    
         </a>

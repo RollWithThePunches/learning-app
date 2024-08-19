@@ -2,7 +2,9 @@
 
 .textfield-wrap {
     .textfield {
-        border: 1px solid $black;
+        background-color: $lt-gray;
+        border: 1px solid $dk-gray;
         border-radius: 5px;
+        padding: 10px;
     }
 }

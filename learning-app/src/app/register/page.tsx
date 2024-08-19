@@ -1,12 +1,12 @@
+'use client';
+
 import { Hero, Kind } from "@/components/hero/hero";
-import Nav from "@/components/navigation/navigation";
 import { ContactForm } from "@/components/form/form";
 
 export default function Register() {
 
     return (
         <>
-        <Nav />
         <main>
             <Hero kind={Kind.HALF}>
                 <div className='h-left'>

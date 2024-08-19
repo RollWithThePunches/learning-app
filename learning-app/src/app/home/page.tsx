@@ -2,7 +2,6 @@
 
 import { Card, Type } from '@/components/card/card';
 // import GridItem from '@/components/grid-item';
-import Nav from '@/components/navigation/navigation'
 import { Kind, Hero } from '@/components/hero/hero';
 import { Anchor } from '@/components/anchor/anchor';
 import { Columns, Number } from '@/components/columns/columns';
@@ -32,7 +31,6 @@ export default function Page() {
 
     return (
         <>
-        <Nav />
         <main>
             <Hero kind={Kind.HALF}>
                 <div className='h-left'>

@@ -19,7 +19,7 @@ export default function Nav() {
         <>
         <nav className='nav-header m0 mb5 p0'>
             <div className='nav-container'>
-                <button type='button' className='nav-hamburger' onClick={handleMouseEvent}>
+                <button type='button' className={`nav-hamburger ${show ? 'active' : null}`} onClick={handleMouseEvent}>
                     <span className='nav-hamburger-bar'></span>
                     <span className='nav-hamburger-bar'></span>
                     <span className='nav-hamburger-bar'></span>

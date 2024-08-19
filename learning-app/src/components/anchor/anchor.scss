@@ -1,1 +1,31 @@
 @import '../../styles/config';
+
+a {
+    color: $purple;
+
+    &:visited {
+        color: $purple;
+    }
+
+    &:hover,
+    &:active {
+        color: $pink;
+    }
+
+    &.dk {
+        color: $purple
+    }
+
+    &.lt {
+        color: $white;
+
+        &:visited {
+            color: $white;
+        }
+
+        &:hover,
+        &:active {
+            color: $pink;
+        }
+    }
+}

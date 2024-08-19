@@ -11,6 +11,8 @@
         @media (max-width: $md) {
             align-items: center;
             display: flex;
+            height: 100%;
+            padding: $p0 $p2;
         }
 
         .nav-li-wrap {
@@ -21,17 +23,18 @@
 
             @media (max-width: $md) {
                 background-color: $white;
+                border-right: 1px solid $dk-gray;
                 height: calc(100vh - 61px);
                 left: 0;
                 padding: $p3;
                 position: absolute;
                 top: 61px;
-                transform: translateX(100vw);
-                width: 100%;
+                transform: translateX(-110vw);
+                transition: all .2s ease-in;
+                width: calc(100% - 32px);
 
                 &.active {
                     transform: translateX(0);
-                    transition: all .2s ease-in;
                 }
             }
 
@@ -50,8 +53,18 @@
                     height: 100%;
     
                     a {
-                        display: flex;
                         align-items: center;
+                        color: $black;
+                        display: flex;
+                        font-weight: $fw4;
+
+                        &:visited {
+                            color: $black;
+                        }
+
+                        &:hover {
+                            color: $pink;
+                        }
                     }
                 }
             }
@@ -61,18 +74,43 @@
             display: none;
 
             @media (max-width: $md) {
+                background-color: $white;
+                border: none;
                 display: flex;
                 flex-direction: column;
                 gap: $m2;
                 height: calc(60px - $p2 * 2);
                 padding: $p2;
+                position: relative;
                 width: calc(60px - $p2 * 2);
             }
             
             .nav-hamburger-bar {
                 background-color: $black;
                 height: 2px;
+                transition: .25s ease-in-out;
                 width: 100%;
+            }
+
+            &.active {
+                .nav-hamburger-bar {
+                    left: 4px;
+                    position: absolute;
+                    top: calc(50% - 4px);
+                    width: 35px;
+
+                    &:first-child {
+                        transform: rotate(45deg);
+                    }
+
+                    &:nth-child(2){
+                        transform: rotate(-45deg);
+                    }
+
+                    &:last-child {
+                        display: none;
+                    }
+                }
             }
         }
         

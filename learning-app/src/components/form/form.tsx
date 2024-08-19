@@ -2,10 +2,25 @@
 
 import './form.scss';
 
-import { FormEvent } from 'react';
 import { Headline, Size } from '../headline/headline';
 import { TextField } from '../textfield/textfield';
 import { Button } from '../button/button';
+import { FormEvent } from 'react';
+import type { NextApiRequest, NextApiResponse } from 'next'
+ 
+async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const data = req.body
+  const id = await createItem(data)
+  res.status(200).json({ id })
+}
+
+function createItem(data: any) {
+    throw new Error('Function not implemented.')
+}
+
 
 interface FormProps {
     headline: string;
@@ -17,59 +32,44 @@ interface SelectOptions {
     value: string
 }
 
-export function ContactForm({headline}: FormProps) {
+// export async function FormSubmit (prevState: any, formData: any) {
+    
+//     const response = await fetch('http://localhost:3000/post-form-data', {
+//         method: 'POST',
+//         body: formData
+//     });
 
-    // const register = (event: { preventDefault: () => void; target: HTMLFormElement | undefined; }) => {
-    //     event.preventDefault();
-    //     const data = new FormData(event.target);
-    //     const value = Object.fromEntries(data.entries());
-    //     console.log(value);
-    //  }
+//     const responseData = await response.json();
+//     return responseData;
+// }
 
-    const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
+async function onSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+ 
 
-        const formData = new FormData(event.currentTarget);
-        const response = await fetch('../../api/form/route', {
+    try {
+        const formData = new FormData(event.currentTarget)
+        const response = await fetch(handler, {
             method: 'POST',
-            body: JSON.stringify(formData),
             headers: {
-                'Content-type': 'application/json'
-            }
-        });
+              'Content-type': 'application/json'
+            },
+            body: JSON.stringify(formData),
+          })
 
-        if (response.ok) {
-            console.log('You are registered!');
-        }
-        if (!response.ok) {
-            console.log('Try again');
-        }
-
-        const responseData = await response.json();
-        console.log(responseData);
-
-        // const formData = {
-            // firstName: String(event.target['first name'].value),
-            // lastName: String(event.target['last name'].value),
-            // email: String(event.target.email.value),
-            // phone: String(event.target.phone.value)
-        // }
-
-        // console.log(formData);
-
-        // const response = await fetch('/api/registration', {
-        //     method: 'POST',
-        //     body: JSON.stringify(formData),
-        // });
-
-        // if (response.ok) {
-        //     console.log('You are registered!');
-        // }
-        // if (!response.ok) {
-        //     console.log('Try again');
-        // }
-        
+        const data = await response.json();
+        return data.submit;
+    } catch (error) {
+        console.error(error);
     }
+    
+  }
+
+export function ContactForm({headline}: FormProps) {
+    // const [state, onSubmit] = useFormState(FormSubmit, '');
+    // const { pending } = useFormStatus;
+
+    
 
     return (
         <>
@@ -77,8 +77,8 @@ export function ContactForm({headline}: FormProps) {
             <Headline headline={headline} size={Size.LARGE} />
             <p className='f1 mb3'>* These are required</p>
             <form className='form contact-form grid g3' id='form' onSubmit={onSubmit}>
-                <TextField label='First name' name='first name' type='text' required inputMode='text' arialabel='Enter first name' />
-                <TextField label='Last name' name='last name' type='text' required inputMode='text' arialabel='Enter last name' />
+                <TextField label='First name' name='first' type='text' required inputMode='text' arialabel='Enter first name' />
+                <TextField label='Last name' name='last' type='text' required inputMode='text' arialabel='Enter last name' />
                 <div className='form-full'>
                     <TextField label='Email address' name='email' type='email' required inputMode='email' arialabel='Enter email address' />
                 </div>
